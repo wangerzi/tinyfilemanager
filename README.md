@@ -40,6 +40,20 @@ To enable/disable authentication set `$use_auth` to true or false.
 
 :information_source: Rename the `config-sample.php` file into `config.php` to use configuration, it is an additional configuration file, Feel free to remove completely this file and configure "tinyfilemanager.php" as a single file application.
 
+### Deploy by Docker
+
+Make sure you have **already installed docker**, [Install reference](https://docs.docker.com/engine/install/)
+
+> **Notice:** Your need an absolute path, and it will be served by tinyfilemanager.
+> 
+> If you want to serve this project at **raspberry or another special platform**, you can download project and **build image by yourself**.
+
+```shell
+docker run -d -v /absolute/path:/var/www/html/data -p 80:80 --restart=always --name tinyfilemanager prasathmani/tinyfilemanager:latest
+```
+
+DockerHub: [https://hub.docker.com/repository/docker/prasathmani/tinyfilemanager](https://hub.docker.com/repository/docker/prasathmani/tinyfilemanager)
+
 ### :loudspeaker: Features
 
 - :cd: Open Source, light and extremely simple
